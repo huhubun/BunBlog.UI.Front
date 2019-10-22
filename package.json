@@ -1,0 +1,28 @@
+{
+  "name": "bunblog.ui.front",
+  "version": "0.0.4",
+  "description": "呼呼小笼包的博客",
+  "author": "huhubun",
+  "private": true,
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development nodemon server/index.js --watch server",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "@nuxtjs/axios": "^5.3.6",
+    "ant-design-vue": "^1.4.1",
+    "cross-env": "^5.2.0",
+    "dayjs": "^1.8.16",
+    "koa": "^2.6.2",
+    "nuxt": "^2.0.0",
+    "showdown": "^1.9.0"
+  },
+  "devDependencies": {
+    "@nuxtjs/style-resources": "^1.0.0",
+    "nodemon": "^1.18.9",
+    "stylus": "^0.54.7",
+    "stylus-loader": "^3.0.2"
+  }
+}
