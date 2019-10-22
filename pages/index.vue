@@ -5,22 +5,21 @@
 </template>
 
 <script>
-import PostList from "~/components/PostList.vue";
+import PostList from '~/components/PostList.vue'
 
 export default {
   data() {
-    return {
-    };
+    return {}
   },
   async asyncData({ $axios }) {
-    const list = await $axios.$get("/api/posts");
+    const list = await $axios.$get('/api/posts')
 
-    return { list };
+    return { list }
   },
   components: {
     PostList
   }
-};
+}
 </script>
 
 <style lang="stylus" scoped>

@@ -2,9 +2,7 @@
   <a-list itemLayout="vertical" :dataSource="list">
     <a-list-item slot="renderItem" slot-scope="item" key="item.id">
       <h2>
-        <n-link
-          :to="`/posts/${item.linkName}`"
-        >{{item.title}}</n-link>
+        <n-link :to="`/posts/${item.linkName}`">{{item.title}}</n-link>
       </h2>
       <p>{{ item.excerpt }}</p>
       <div>
@@ -36,12 +34,12 @@
 import dayjs from 'dayjs'
 
 export default {
-  name: "PostList",
+  name: 'PostList',
   props: {
     list: {
       type: Array,
       default: function() {
-        return [];
+        return []
       },
       required: true
     }
@@ -49,24 +47,23 @@ export default {
   methods: {
     getPostVisits(metadataList) {
       if (metadataList) {
-        let metadata = metadataList.filter(ele => ele.key === "VISITS");
+        let metadata = metadataList.filter(ele => ele.key === 'VISITS')
         if (metadata) {
-          return metadata[0].value;
+          return metadata[0].value
         }
       }
 
-      return 0;
+      return 0
     },
     formatDate(datetime) {
-      let dayjsObj = dayjs(datetime);
-      return `${dayjsObj.format("YYYY-MM-DD HH:mm")} (${dayjsObj.fromNow()})`;
+      let dayjsObj = dayjs(datetime)
+      return `${dayjsObj.format('YYYY-MM-DD HH:mm')} (${dayjsObj.fromNow()})`
     }
   }
-};
+}
 </script>
 
 <style lang="stylus" scoped>
-i.anticon {
-  margin-right: 8px;
-}
+i.anticon
+  margin-right: 8px
 </style>

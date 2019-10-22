@@ -28,17 +28,16 @@
 </template>
 
 <script>
-import Copyright from "~/components/layout/Copyright.vue";
+import Copyright from '~/components/layout/Copyright.vue'
 
 export default {
   components: {
     Copyright
   }
-};
+}
 </script>
 
 <style lang="stylus">
-
 .bun-margin-top
   margin-top: 8px
 
@@ -65,35 +64,28 @@ export default {
 
 .bun-left
   float: left
-  
-.ant-layout {
-  min-height: 100vh;
-}
 
-.ant-layout-header {
-  text-align: right;
-  background-color: #FFF;
-  box-shadow: 0 0 10px -5px #000;
-}
+.ant-layout
+  min-height: 100vh
+
+.ant-layout-header
+  text-align: right
+  background-color: #FFF
+  box-shadow: 0 0 10px -5px #000
 
 .ant-input-search
-  text-align left
+  text-align: left
 
-.ant-layout-header .ant-menu.ant-menu-root {
-  border-bottom: 0;
-  padding-top: 8px;
-}
+.ant-layout-header .ant-menu.ant-menu-root
+  border-bottom: 0
+  padding-top: 8px
 
-.ant-layout-content {
-  background-color: #FFF;
-}
+.ant-layout-content
+  background-color: #FFF
 
-.ant-layout-footer a {
-  color: rgba(0, 0, 0, 0.65);
-}
+.ant-layout-footer a
+  color: rgba(0, 0, 0, 0.65)
 
-.title {
-  font-size: 1.6em;
-}
-
+.title
+  font-size: 1.6em
 </style>

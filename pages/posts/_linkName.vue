@@ -54,102 +54,91 @@
 </template>
 
 <script>
-import dayjs from "dayjs";
-import showdown from "showdown";
+import dayjs from 'dayjs'
+import showdown from 'showdown'
 
 export default {
   data() {
     return {
       visits: 0
-    };
+    }
   },
   async asyncData({ $axios, params }) {
-    let post = await $axios.$get(`/api/posts/${params.linkName}`);
+    let post = await $axios.$get(`/api/posts/${params.linkName}`)
 
-    $axios.$post(`/api/posts/${post.id}/visits`);
+    $axios.$post(`/api/posts/${post.id}/visits`)
 
-    let converter = new showdown.Converter();
-    let content = converter.makeHtml(post.content);
+    let converter = new showdown.Converter()
+    let content = converter.makeHtml(post.content)
 
-    return { post, content };
+    return { post, content }
   },
   methods: {
     formatDate(datetime) {
-      let dayjsObj = dayjs(datetime);
-      return `${dayjsObj.format("YYYY-MM-DD HH:mm")} (${dayjsObj.fromNow()})`;
+      let dayjsObj = dayjs(datetime)
+      return `${dayjsObj.format('YYYY-MM-DD HH:mm')} (${dayjsObj.fromNow()})`
     },
     getVisits(metadataList) {
       if (metadataList) {
-        let metadata = metadataList.filter(ele => ele.key === "VISITS");
+        let metadata = metadataList.filter(ele => ele.key === 'VISITS')
         if (metadata) {
-          return metadata[0].value;
+          return metadata[0].value
         }
       }
 
-      return 0;
+      return 0
     }
   },
   head() {
     return {
       title: this.post.title,
       meta: [
-        { hid: "description", name: "description", content: this.post.excerpt }
+        { hid: 'description', name: 'description', content: this.post.excerpt }
       ]
-    };
+    }
   }
-};
+}
 </script>
 
 
 <style lang="stylus" scoped>
-.header {
-  background-color: rgba(0, 0, 0, 0.1);
-  margin-bottom: 16px;
-  padding: 8px 0;
+.header
+  background-color: rgba(0, 0, 0, 0.1)
+  margin-bottom: 16px
+  padding: 8px 0
 
-  .category {
-    padding-top: 100px;
-    text-align: center;
+  .category
+    padding-top: 100px
+    text-align: center
 
-    button {
-      color: #000;
-      border-color: #000;
-    }
+    button
+      color: #000
+      border-color: #000
 
-    button:hover {
-      text-shadow: 0px 0px 1px #000;
-      box-shadow: 0px 0px 8px 0 #999, inset 0px 0px 5px 0 #999;
-    }
+    button:hover
+      text-shadow: 0px 0px 1px #000
+      box-shadow: 0px 0px 8px 0 #999, inset 0px 0px 5px 0 #999
 
-    button:after {
-      border-color: #000;
-    }
-  }
+    button:after
+      border-color: #000
 
-  .title {
-    text-align: center;
-    font-size: 44px;
-    padding-bottom: 100px;
-    margin: 0;
-  }
+  .title
+    text-align: center
+    font-size: 44px
+    padding-bottom: 100px
+    margin: 0
 
-  .info {
-    text-align: right;
-    padding-right: 50px;
+  .info
+    text-align: right
+    padding-right: 50px
 
-    .tag-container {
-      a {
-        color: black;
-      }
+    .tag-container
+      a
+        color: black
 
-      a:hover {
-        text-decoration: underline;
-      }
-    }
-  }
-}
+      a:hover
+        text-decoration: underline
 
-.content-container {
-  padding: 0 16px;
-}
+.content-container
+  padding: 0 16px
 </style>
