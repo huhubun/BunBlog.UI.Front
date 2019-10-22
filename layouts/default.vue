@@ -4,10 +4,10 @@
       <a-layout-header>
         <a-menu mode="horizontal" theme="light">
           <a-menu-item class="title bun-left">
-            <router-link to="/">呼呼小笼包的博客</router-link>
+            <n-link to="/">呼呼小笼包的博客</n-link>
           </a-menu-item>
           <a-menu-item>
-            <router-link to="/about">关于</router-link>
+            <n-link to="/about">关于</n-link>
           </a-menu-item>
           <a-menu-item>
             <a-tooltip placement="bottom" title="(lll￢ω￢) 该功能尚未实装">

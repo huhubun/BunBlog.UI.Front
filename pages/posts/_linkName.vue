@@ -28,12 +28,12 @@
           <div v-if="post.tagList != null && post.tagList.length > 0" class="tag-container">
             <a-icon type="tags" />
             <span class="bun-margin-left">
-              <router-link
+              <n-link
                 v-for="tag in post.tagList"
                 :to="`/tags/${tag.linkName}`"
                 v-bind:key="tag.linkName"
                 class="bun-margin-right"
-              >{{ tag.displayName }}</router-link>
+              >{{ tag.displayName }}</n-link>
             </span>
           </div>
         </div>
