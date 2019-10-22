@@ -1,3 +1,4 @@
+var webpack = require('webpack');
 
 module.exports = {
   mode: 'universal',
@@ -61,6 +62,11 @@ module.exports = {
     /*
     ** You can extend webpack config here
     */
+    plugins: [
+      new webpack.DefinePlugin({
+        'process.env.BUN_BLOG_UI_VERSION': JSON.stringify(require('./package.json').version)
+      })
+    ],
     extend(config, ctx) {
     }
   }

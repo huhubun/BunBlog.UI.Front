@@ -5,7 +5,7 @@
         <a-icon type="thunderbolt" />Powered by
       </span>
       <span>
-        <a href="https://github.com/huhubun/BunBlog.UI">BunBlog.UI</a>
+        <a href="https://github.com/huhubun/BunBlog.UI.Front">BunBlog.UI.Front</a>
         {{ uiVersion }}
       </span>
       <a-divider type="vertical" />
@@ -22,8 +22,6 @@
 </template>
 
 <script>
-import { get as getInformation } from '@/api/information'
-
 export default {
   name: 'PoweredBy',
   data() {
@@ -44,8 +42,8 @@ export default {
   },
   methods: {
     getApiInformation() {
-      getInformation().then(res => {
-        this.$store.commit('setApiInformation', res)
+      this.$axios.get(`/api/information`).then(res => {
+        this.$store.commit('apiInformation/set', res.data)
       })
     }
   },
