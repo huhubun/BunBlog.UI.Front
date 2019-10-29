@@ -13,6 +13,7 @@
 
 <script>
 export default {
+  name: 'dashboard',
   layout: 'admin',
   head() {
     return {
