@@ -39,7 +39,7 @@ export default {
 }
 </script>
 
-<style lang="stylus">
+<style lang="stylus" scoped>
 .bun-margin-top
   margin-top: 8px
 
