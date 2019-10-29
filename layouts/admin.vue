@@ -81,7 +81,6 @@ export default {
   data(){
     return {
       collapsed: false,
-      username: '',//Vue.sessionStorage.get('username'),
       selectedKeys: []
     }
   },
@@ -93,6 +92,11 @@ export default {
     logout() {
       // clearLoginInfo()
       // this.$router.push('/admin/login')
+    }
+  },
+  computed: {
+    username() {
+      return this.$store.state.currentUser.username
     }
   },
   components: {

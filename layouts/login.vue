@@ -1,9 +1,6 @@
 <template>
   <client-only>
     <a-layout style="min-height: 100vh">
-      <header>
-        <h1>Bun Blog Admin</h1>
-      </header>
       <a-layout-content>
         <nuxt />
       </a-layout-content>
@@ -30,13 +27,6 @@ export default {
 <style lang="stylus" scoped>
 .ant-layout
   min-height: 100vh
-
-header
-  text-align: center
-  padding-top: 128px
-
-  h1
-    font-weight: 200
 
 .login-operation
   text-align: center
