@@ -34,6 +34,7 @@ module.exports = {
   plugins: [
     '@/plugins/antd-ui',
     '@/plugins/axios',
+    '@/plugins/bun-helper',
     '@/plugins/dayjs'
   ],
   /*
