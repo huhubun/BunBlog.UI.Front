@@ -66,7 +66,8 @@ module.exports = {
     */
     plugins: [
       new webpack.DefinePlugin({
-        'process.env.BUN_BLOG_UI_VERSION': JSON.stringify(require('./package.json').version)
+        'process.env.BUN_BLOG_UI_VERSION': JSON.stringify(require('./package.json').version),
+        'process.env.BUN_BLOG_API_BASE_URL': JSON.stringify(process.env.NODE_ENV === 'development' ? 'http://localhost:52000' : 'https://api.bun.dev')
       })
     ],
     extend(config, ctx) {
