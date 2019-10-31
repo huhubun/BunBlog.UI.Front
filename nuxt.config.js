@@ -33,6 +33,7 @@ module.exports = {
   */
   plugins: [
     '@/plugins/antd-ui',
+    '@/plugins/axios',
     '@/plugins/dayjs'
   ],
   /*
