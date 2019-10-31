@@ -78,7 +78,7 @@ export default {
                 username: loginInfo.username
               })
 
-              this.$router.push('/admin/dashboard')
+              this.$router.push('/admin')
 
               this.$notification.success({
                 message: `${loginInfo.username}，欢迎回来！`,
