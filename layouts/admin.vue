@@ -99,6 +99,7 @@ export default {
       return this.$store.state.currentUser.username
     }
   },
+  middleware: 'auth',
   components: {
     PoweredBy,
     Copyright
