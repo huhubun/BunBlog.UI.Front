@@ -92,9 +92,6 @@ export default {
       return this.$store.state.currentUser.username
     }
   },
-  mounted() {
-    console.log(this.$route.matched.concat())
-  },
   middleware: 'auth',
   components: {
     PoweredBy,

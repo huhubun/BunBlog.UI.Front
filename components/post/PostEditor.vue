@@ -447,15 +447,6 @@ export default {
 #post-operation
   text-align: right
 
-  .bun-btn-publish-revised
-    border-top-right-radius: 0
-    border-bottom-right-radius: 0
-    border-right: 0
-
-  .bun-btn-open-publish-drawer
-    border-top-left-radius: 0
-    border-bottom-left-radius: 0
-
 #title-container
   margin-top: 8px
 
