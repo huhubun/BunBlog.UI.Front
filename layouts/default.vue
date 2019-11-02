@@ -1,6 +1,6 @@
 <template>
   <a-layout>
-    <a-affix :offsetTop="0">
+    <a-affix :offsetTop="0" style="height: 64px">
       <a-layout-header>
         <a-menu mode="horizontal" theme="light">
           <a-menu-item class="title bun-left">
