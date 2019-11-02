@@ -31,13 +31,6 @@
               <span>标签</span>
             </n-link>
           </a-menu-item>
-
-          <a-menu-item key="/admin/page">
-            <n-link to="/admin/page">
-              <a-icon type="file" />
-              <span>页面</span>
-            </n-link>
-          </a-menu-item>
         </a-menu>
       </a-layout-sider>
       <a-layout>

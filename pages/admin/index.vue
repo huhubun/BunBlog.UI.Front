@@ -6,7 +6,6 @@
       description="This page is under development and will be available later"
       type="warning"
     />
-    <span><n-link to="/">home</n-link></span>
 
   </div>
 </template>
