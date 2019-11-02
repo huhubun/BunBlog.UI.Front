@@ -1,6 +1,6 @@
 <template>
   <a-layout>
-    <a-affix :offsetTop="0" style="height: 64px">
+    <a-affix :offsetTop="0" class="header-affix">
       <a-layout-header>
         <a-menu mode="horizontal" theme="light">
           <a-menu-item class="title bun-left">
@@ -40,6 +40,9 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
+.header-affix
+  height: 64px
+
 .ant-layout
   min-height: 100vh
 
