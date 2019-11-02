@@ -66,4 +66,18 @@ export default {
 
 .title
   font-size: 1.6em
+  /* 消除 ant menu item 底部的蓝线效果 */
+  transition: none
+
+.title:hover
+  border: 0
+
+.title.ant-menu-item-selected, .title.ant-menu-item-actived
+  border: 0
+
+.title.ant-menu-item-selected a
+  color: rgba(0, 0, 0, 0.65)
+
+.title.ant-menu-item-selected a:hover
+  color: #1890ff
 </style>
