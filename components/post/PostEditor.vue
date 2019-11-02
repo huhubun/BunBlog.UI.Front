@@ -160,6 +160,7 @@
           :action="uploadImageUrl"
           :multiple="false"
           :showUploadList="false"
+          :headers="{Authorization: `Bearer ${$store.state.currentUser.accessToken}`}"
           accept="image/png, image/jpg"
           @change="onUploadImageChange"
         >
@@ -246,8 +247,6 @@ export default {
     },
     getUploadImageUrl() {
       return `${process.env.BUN_BLOG_API_BASE_URL}/api/images`
-
-      // TODO 上传图片接口有身份认证，控件怎么处理
     },
     openPublishDrawer() {
       this.isPublishDrawerOpened = true
