@@ -2,6 +2,10 @@ var webpack = require('webpack');
 
 module.exports = {
   mode: 'universal',
+
+  // Disable the progress bar
+  loading: false,
+
   /*
   ** Headers of the page
   */
@@ -18,10 +22,6 @@ module.exports = {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ]
   },
-  /*
-  ** Customize the progress-bar color
-  */
-  loading: { color: '#fff' },
   /*
   ** Global CSS
   */
