@@ -28,6 +28,9 @@ module.exports = {
   css: [
     'ant-design-vue/dist/antd.css'
   ],
+  styleResources:{
+    stylus: './assets/style.styl'
+  },
   /*
   ** Plugins to load before mounting the App
   */

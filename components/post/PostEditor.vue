@@ -89,10 +89,10 @@
       wrapClassName="publish-drawer"
     >
       <div>
-        <a-divider dashed>链接名称</a-divider>
-        <a-input v-model="editorPost.linkName">
-          <a-icon slot="prefix" type="link" />
-        </a-input>
+        <a-divider dashed>
+          <a-icon type="link" />链接名称
+        </a-divider>
+        <a-input v-model="editorPost.linkName" />
       </div>
       <div>
         <a-divider dashed>
