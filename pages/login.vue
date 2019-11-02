@@ -72,7 +72,7 @@ export default {
               grant_type: 'password'
             })
             .then(res => {
-              this.$store.commit('currentUser/set', {
+              this.$store.commit('currentUser/login', {
                 accessToken: res.access_token,
                 refreshToken: res.refresh_token,
                 username: loginInfo.username

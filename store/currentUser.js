@@ -5,9 +5,14 @@ export const state = () => ({
 })
 
 export const mutations = {
-  set(state, currentUser) {
+  login(state, currentUser) {
     state.username = currentUser.username
     state.accessToken = currentUser.accessToken
     state.refreshToken = currentUser.refreshToken
+  },
+  logout(state) {
+    state.username = null
+    state.accessToken = null
+    state.refreshToken = null
   }
 }

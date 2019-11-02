@@ -90,8 +90,8 @@ export default {
       // this.selectedKeys = [routes.pop().path]
     },
     logout() {
-      // clearLoginInfo()
-      // this.$router.push('/admin/login')
+      this.$store.commit('currentUser/logout')
+      this.$router.push('/login')
     }
   },
   computed: {
