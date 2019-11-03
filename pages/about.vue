@@ -34,11 +34,11 @@
           </a-col>
           <a-col span="8" class="about-me-image-container">
             <div>
-              <img src="/img/about_me.jpg" alt="about me" />
+              <img src="https://img.bun.dev/about_me.jpg" alt="about me" />
             </div>
 
             <div class="bun-margin-top">
-              <img src="/img/wechat_qr.png" alt="微信公众号二维码" />
+              <img src="https://img.bun.dev/wechat_qr.png" alt="微信公众号二维码" />
               <br />
 
               <span>
