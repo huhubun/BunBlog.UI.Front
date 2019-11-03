@@ -43,6 +43,7 @@
           <a-col :xs="0" :md="3"></a-col>
           <a-col :xs="24" :md="18">
             <div v-html="content"></div>
+            <eof />
           </a-col>
         </a-row>
       </div>
@@ -56,6 +57,7 @@
 <script>
 import dayjs from 'dayjs'
 import showdown from 'showdown'
+import eof from '~/components/layout/EOF.vue'
 
 export default {
   data() {
@@ -96,6 +98,9 @@ export default {
         { hid: 'description', name: 'description', content: this.post.excerpt }
       ]
     }
+  },
+  components: {
+    eof
   }
 }
 </script>
