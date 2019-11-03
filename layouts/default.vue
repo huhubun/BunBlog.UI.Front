@@ -22,6 +22,7 @@
     </a-layout-content>
     <a-layout-footer>
       <powered-by />
+      <follow />
       <copyright />
     </a-layout-footer>
   </a-layout>
@@ -29,11 +30,13 @@
 
 <script>
 import PoweredBy from '~/components/layout/PoweredBy.vue'
+import Follow from '~/components/layout/Follow.vue'
 import Copyright from '~/components/layout/Copyright.vue'
 
 export default {
   components: {
     PoweredBy,
+    Follow,
     Copyright
   }
 }
