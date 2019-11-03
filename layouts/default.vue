@@ -52,7 +52,7 @@ export default {
 .ant-layout-header
   text-align: right
   background-color: #FFF
-  box-shadow: 0 0 10px -5px #000
+  box-shadow: 0 0 10px 0px #999
 
 .ant-input-search
   text-align: left
@@ -63,6 +63,9 @@ export default {
 
 .ant-layout-content
   background-color: #FFF
+
+.ant-layout-footer
+  background-color: #EAEAEA
 
 .ant-layout-footer a
   color: rgba(0, 0, 0, 0.65)
