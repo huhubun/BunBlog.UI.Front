@@ -30,7 +30,7 @@ export default {
           hid: 'keywords',
           name: 'keywords',
           content:
-            '呼呼小笼包,huhubun,bun.dev,技术,软件,开发,博客,文章,精品软件,推荐'
+            '呼呼小笼包,huhubun,bun.dev,技术,软件,开发,个人博客,博客,文章,精品软件,推荐'
         }
       ]
     }
